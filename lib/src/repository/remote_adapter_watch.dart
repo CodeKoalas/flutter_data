@@ -86,7 +86,8 @@ mixin _RemoteAdapterWatch<T extends DataModel<T>> on _RemoteAdapter<T> {
       }
     });
 
-    _notifier.onDispose = _graphNotifier.dispose;
+    // @WORKAROUND: https://github.com/flutterdata/flutter_data/issues/105
+    //_notifier.onDispose = _graphNotifier.dispose;
     return _notifier;
   }
 
@@ -238,7 +239,8 @@ mixin _RemoteAdapterWatch<T extends DataModel<T>> on _RemoteAdapter<T> {
       }
     });
 
-    _notifier.onDispose = _graphNotifier.dispose;
+    // @WORKAROUND: https://github.com/flutterdata/flutter_data/issues/105
+    //_notifier.onDispose = _graphNotifier.dispose;
     return _notifier;
   }
 
